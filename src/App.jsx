@@ -1,5 +1,9 @@
 import PokemonCard from "./components/PokemonCard"
 
-<div>
-  <PokemonCard  />
-  </div>
+
+    <div>
+      <PokemonCard  />
+    </div>
+
+
+export default PokemonCard;
