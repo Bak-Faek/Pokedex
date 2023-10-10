@@ -1,17 +1,7 @@
-const pokemonList = [
-    {
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
+/* eslint-disable react/prop-types */
 
+function PokemonCard({pokemon}) {
 
-function PokemonCard() {
-    let pokemon = pokemonList[1];
     return (
         <div>
             <figure>
@@ -23,6 +13,7 @@ function PokemonCard() {
                 }
             </figcaption>
         </div>
+    
     )
 }
 
