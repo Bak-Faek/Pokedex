@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
-function PokemonCard({pokemon}) {
+function PokemonCard({pokemonList}) {
 
     return (
         <div>
             <figure>
-                {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.img}/> : <p>???</p>
+                {pokemonList.imgSrc ? <img src={pokemonList.imgSrc} alt={pokemonList.img}/> : <p>???</p>
             }
             </figure>
             <figcaption>
-                {pokemon.name ? pokemon.name :<p>???</p>
+                {pokemonList.name ? pokemonList.name :<p>???</p>
                 }
             </figcaption>
         </div>
@@ -19,7 +19,7 @@ function PokemonCard({pokemon}) {
 
 
 PokemonCard.propTypes = {
-    pokemon : PropTypes.shape ({
+    pokemonList : PropTypes.shape ({
         name: PropTypes.string.isRequired,
         imgSrc: PropTypes.string,
     }).isRequired,
