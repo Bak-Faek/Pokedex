@@ -1,40 +1,19 @@
-function NavBar ({setpokemonIndex,pokemonIndex,pokemonList}){
+
+function NavBar ({pokemonIndex,setpokemonIndex,pokemonList}){
    
-    // const handleClickMinus = () => { 
-    //  if(pokemonIndex>0)
-    //  setpokemonIndex (pokemonIndex - 1 )
-    
-    // }
-    // const handleClickAdd = () => {
-    //  if(pokemonIndex < pokemonList.length - 1)
-    //  setpokemonIndex (pokemonIndex + 1 )
-    // }
-const handleClick = () => {
-    for (let i=0 ; i < pokemonList.length ; i++)
-    if (pokemonIndex === i){
-        return i;
+    function handleClick (index)  {
+        setpokemonIndex(index)
     }
-    }
-
-
+        
     return (
         <div>
-            <ul>
-            {pokemonList.map ((pokemonList => (
-                <li key={pokemonList.name}>
-              <button onClick={handleClick}>{pokemonList.name}</button>
-              </li>
+            {pokemonList.map((element, index) => 
+                    (             
+                        <button key={element.name} onClick={() => handleClick(index)}>{element.name}</button>
                     )
-                ) 
-            )
-            }
-            </ul>
-
-           
-            {/* {pokemonIndex > 0 && (<button onClick={handleClickMinus}>Précédent</button>)}
-            {pokemonIndex < pokemonList.length - 1 && (<button onClick={handleClickAdd}>Suivant</button>)} */}
-   
-         </div>
+                )
+            }  
+        </div> 
     );
     
 }
