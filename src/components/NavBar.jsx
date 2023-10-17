@@ -1,9 +1,19 @@
+import { element } from "prop-types";
 
 function NavBar ({pokemonIndex,setpokemonIndex,pokemonList}){
    
     function handleClick (index)  {
-        setpokemonIndex(index)
+        setpokemonIndex(index);
+        if (element.name = 'pikachu')
+        useEffect(
+                () =>  {
+               
+                alert ("pika pikachu !!!")
+                }, 
+            []
+        )
     }
+    
         
     return (
         <div>
